@@ -14,4 +14,14 @@ Oura Studio is a custom, high-performance, native iOS inventory and production m
 
 The core mission of this application is to solve the complex problem of accurate HPP (COGS) calculation when raw fabric roll material is nested and cut into multiple finished goods with different size dimensions, alongside managing stock ledger tracking, pricing optimization, and sales recording.
 
+**Tech Stack:**
+- SwiftUI
+- DB: PostgreSQL on Supabase
+- BE: FastAPI (Python) deployed on Google Cloud Platform
+- Google SSO
+- Bluetooth Thermal Printer Integration
+- XLSX Generator for bulk marketplace uploads
+- QR Generator & Scanner
+- Image Server on Google Cloud Platform
+
 **→ View Project:** https://omdika.github.io/oura-studio-ios/

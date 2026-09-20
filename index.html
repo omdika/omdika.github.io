@@ -68,7 +68,14 @@
     .card h2 a:hover { text-decoration: underline; text-underline-offset: 3px; }
     .card p { font-size: 14.5px; color: #374151; line-height: 1.7; }
     .card p + p { margin-top: 12px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .stack { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .stack-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    .stack-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
+    .stack-list li { font-size: 13.5px; color: #374151; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+    .stack-list li::before { content: "•"; color: #9ca3af; font-weight: 700; flex-shrink: 0; }
+    .stack-list li strong { font-weight: 600; color: #111827; }
+    @media (max-width: 600px) { .stack-list { grid-template-columns: 1fr; } }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
     .tag {
       font-size: 12px; font-weight: 500; color: #374151;
       background: #f3f4f6; border: 1px solid var(--border);
@@ -131,11 +138,25 @@
       <p>
         The core mission is to solve the complex problem of accurate HPP (COGS) calculation when raw fabric roll material is nested and cut into multiple finished goods with different size dimensions — alongside stock ledger tracking, pricing optimization, and sales recording.
       </p>
+      <div class="stack">
+        <div class="stack-title">Tech Stack</div>
+        <ul class="stack-list">
+          <li><strong>SwiftUI</strong></li>
+          <li><strong>PostgreSQL</strong> on Supabase</li>
+          <li><strong>FastAPI</strong> (Python) on Google Cloud Platform</li>
+          <li>Google SSO</li>
+          <li>Bluetooth Thermal Printer Integration</li>
+          <li>XLSX Generator for bulk marketplace uploads</li>
+          <li>QR Generator & Scanner</li>
+          <li>Image Server on Google Cloud Platform</li>
+        </ul>
+      </div>
       <div class="tags">
-        <span class="tag">Swift</span>
-        <span class="tag">SwiftUI / UIKit</span>
+        <span class="tag">SwiftUI</span>
+        <span class="tag">Supabase</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">GCP</span>
         <span class="tag">HPP / COGS Engine</span>
-        <span class="tag">Inventory System</span>
       </div>
       <div class="card-footer">
         <a class="btn" href="https://omdika.github.io/oura-studio-ios/" target="_blank" rel="noopener">
