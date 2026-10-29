@@ -29,7 +29,7 @@
     .card h2 a:hover { text-decoration:underline; text-underline-offset:3px; }
     .card p { font-size:14.5px; color:#374151; line-height:1.7; }
     .card p + p { margin-top:12px; }
-    .project-image { width:100%; max-height:360px; object-fit:cover; border-radius:10px; border:1px solid var(--border); margin:16px 0 12px; }
+    .project-image { display:block; width:320px; max-width:100%; height:auto; object-fit:contain; border-radius:10px; border:1px solid var(--border); margin:16px auto 12px; }
     .stack { margin-top:20px; padding-top:16px; border-top:1px solid var(--border); }
     .stack-title { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
     .stack-list { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:6px 16px; }
@@ -45,7 +45,7 @@
     .link-muted:hover { color:var(--fg); }
     footer { margin-top:36px; padding:20px 0 32px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--muted); }
     footer a:hover { color:var(--fg); }
-    @media (max-width:600px) { .hero{padding:32px 0 20px;} .hero h1{font-size:26px;} .hero p{font-size:16px;} .card{padding:22px;} .stack-list{grid-template-columns:1fr;} }
+    @media (max-width:600px) { .hero{padding:32px 0 20px;} .hero h1{font-size:26px;} .hero p{font-size:16px;} .card{padding:22px;} .stack-list{grid-template-columns:1fr;} .project-image{width:100%; max-width:320px;} }
   </style>
 </head>
 <body>
@@ -54,7 +54,7 @@
       <a href="https://omdika.github.io" class="logo">omdika.github.io</a>
       <div class="nav-links"><a href="https://github.com/omdika" target="_blank" rel="noopener">GitHub</a><a href="mailto:aswarhan@gmail.com">Contact</a></div>
     </nav>
-    <section class="hero"><h1>Welcome to my portfolio.</h1><p>I'm <strong>Handika</strong> — iOS & software developer focused on building clean, high-performance native applications. Here's a selection of my work.</p></section>
+    <section class="hero"><h1>Welcome to my portfolio.</h1><p>I'm <strong>Handika</strong> — iOS & software developer focused on building clean, high-performance native applications. Here's a select[...]
     <div class="section-label">Featured Projects</div>
 
     <article class="card">
@@ -73,13 +73,13 @@
       </ul>
       <p style="margin-top:12px;">Built with a strong focus on reliability, real-world edge cases, and operational efficiency, the system is designed to support continuous daily usage in a live business environment.</p>
       <div class="stack"><div class="stack-title">📊 Impact</div><ul class="stack-list">
-        <li>Used daily to manage production, inventory, and sales workflows</li><li>Handles real transactions and product lifecycle tracking</li><li>Reduces manual errors in stock management and labeling</li><li>Streamlines integration with external platforms (e.g., Shopee bulk upload)</li>
+        <li>Used daily to manage production, inventory, and sales workflows</li><li>Handles real transactions and product lifecycle tracking</li><li>Reduces manual errors in stock management and label generation</li>
       </ul></div>
       <div class="stack"><div class="stack-title">⚙️ Tech Stack</div><ul class="stack-list">
         <li><strong>SwiftUI</strong></li><li><strong>FastAPI</strong> (Python) on Google Cloud Platform</li><li><strong>PostgreSQL</strong> (Supabase)</li><li>Google SSO</li><li>Bluetooth thermal printer integration</li>
       </ul></div>
       <div class="tags"><span class="tag">SwiftUI</span><span class="tag">FastAPI</span><span class="tag">GCP</span><span class="tag">Supabase</span><span class="tag">Bluetooth Printer</span></div>
-      <div class="card-footer"><a class="btn" href="https://omdika.github.io/oura-studio-ios/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <div class="card-footer"><a class="btn" href="https://omdika.github.io/oura-studio-ios/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub</a></div>
     </article>
 
     <article class="card" style="margin-top:16px;">
@@ -89,14 +89,14 @@
       
       <img class="project-image" src="https://github.com/user-attachments/assets/b5eb5368-06ce-4f75-a6ba-b2ac01a87854" alt="Kemah iOS App Preview" />
 
-      <p>Kemah is an iOS app that helps groups organize camping trips from preparation until every expense is settled. All trip details live in one place, so every member knows what to bring, what to do, and what to pay.</p>
+      <p>Kemah is an iOS app that helps groups organize camping trips from preparation until every expense is settled. All trip details live in one place, so every member knows what to bring, what to do, and who paid for what.</p>
       <p>Group camping usually means endless chats, scattered packing lists, and confusing cost-sharing calculations. Kemah brings everything together into one simple flow:</p>
-      <ol style="font-size:14.5px; color:#374151; line-height:1.7; margin:10px 0 0 18px;"><li>Create a trip and invite friends.</li><li>Split tasks and gear.</li><li>Log every expense.</li><li>View and settle the cost split.</li></ol>
+      <ol style="font-size:14.5px; color:#374151; line-height:1.7; margin:10px 0 0 18px;"><li>Create a trip and invite friends.</li><li>Split tasks and gear.</li><li>Log every expense.</li><li>View a clear, real-time settlement summary.</li></ol>
       <div class="stack"><div class="stack-title">Key Features</div><ul class="stack-list">
-        <li><strong>Task Sharing</strong> — checklist for gear, tickets & logistics with assignee (PIC)</li><li><strong>Flexible Budget</strong> — Per Person, Per Group, Per Assignee</li><li><strong>Split Bill Engine</strong> — transparent cost-splitting calculation</li><li><strong>Easy Invites</strong> — share trips via WhatsApp</li>
+        <li><strong>Task Sharing</strong> — checklist for gear, tickets & logistics with assignee (PIC)</li><li><strong>Flexible Budget</strong> — Per Person, Per Group, Per Assignee</li><li><strong>Expense Tracking</strong> — log spending, manage reimbursements, and split costs clearly</li><li><strong>Trip Overview</strong> — keep all essential details in one view for the whole group</li>
       </ul></div>
       <div class="tags"><span class="tag">SwiftUI</span><span class="tag">iOS 16+</span><span class="tag">Google SSO</span><span class="tag">Split Bill Engine</span><span class="tag">WhatsApp Invite</span></div>
-      <div class="card-footer"><a class="btn" href="https://omdika.github.io/kemah-ios/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <div class="card-footer"><a class="btn" href="https://omdika.github.io/kemah-ios/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub</a></div>
     </article>
 
     <article class="card" style="margin-top:16px;">
@@ -105,32 +105,32 @@
       <p>This project consists of two main components: a crawler that collects news articles from Detik.com as sample test objects, and an automated QA Agent that verifies article quality.</p>
       <p>The agent generates relevant test cases, runs verification with AI (Groq) and a search engine (Tavily), then stores the results in a PostgreSQL database.</p>
       <div class="stack"><div class="stack-title">Key Features</div><ul class="stack-list">
-        <li><strong>News Crawler</strong> — collects article titles, URLs, dates, and content</li><li><strong>Playwright</strong> — automates data scraping from Detik.com</li><li><strong>AI QA Agent</strong> — generates 3–5 test cases per article</li><li><strong>Fact Checking</strong> — verification using Tavily and Groq</li><li><strong>Quality Status</strong> — done, warning, flagged, or error</li><li><strong>PostgreSQL</strong> — storage for articles and test results</li>
+        <li><strong>News Crawler</strong> — collects article titles, URLs, dates, and content</li><li><strong>Playwright</strong> — automates data scraping from Detik.com</li><li><strong>AI QA Agent</strong> — evaluates quality with LLM reasoning and web search</li><li><strong>Data Pipeline</strong> — stores results and test insights in PostgreSQL</li>
       </ul></div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">Groq AI</span><span class="tag">Tavily</span><span class="tag">PostgreSQL</span><span class="tag">QA Automation</span></div>
-      <div class="card-footer"><a class="btn" href="https://omdika.github.io/agentic_qa/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">Groq AI</span><span class="tag">Tavily</span><span class="tag">PostgreSQL</span><span class="tag">AI QA</span></div>
+      <div class="card-footer"><a class="btn" href="https://omdika.github.io/agentic_qa/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub</a></div>
     </article>
 
     <article class="card" style="margin-top:16px;">
       <div class="card-meta">Playwright · Groq AI · GitHub Actions</div>
       <h2><a href="https://omdika.github.io/qagent/" target="_blank" rel="noopener">QAgent — AI-Powered Frontend QA Automation</a></h2>
-      <p>QAgent is a demo automation testing platform for frontend web applications. QAgent uses Playwright for browser automation, Groq AI as an agent to create and evaluate test cases, and Tavily for AI-powered web search.</p>
+      <p>QAgent is a demo automation testing platform for frontend web applications. QAgent uses Playwright for browser automation, Groq AI as an agent to create and evaluate test cases, and Tavily for supporting research and validation.</p>
       <p>This project demonstrates how the QA process can run automatically via GitHub Actions whenever a Pull Request is created or updated.</p>
       <div class="stack"><div class="stack-title">Key Features</div><ul class="stack-list">
-        <li><strong>Browser Automation</strong> — runs Playwright Chromium</li><li><strong>Frontend Discovery</strong> — discovers pages and elements before generating tests</li><li><strong>AI Test Cases</strong> — creates scenarios from user stories and Pull Request context</li><li><strong>AI Evaluation</strong> — evaluates test results and determines pass/fail status</li><li><strong>Bug Report</strong> — collects console errors and generates JSON reports</li><li><strong>GitHub Actions</strong> — automation triggered on Pull Request</li>
+        <li><strong>Browser Automation</strong> — runs Playwright Chromium</li><li><strong>Frontend Discovery</strong> — discovers pages and elements before generating tests</li><li><strong>AI Test Generation</strong> — uses LLMs to craft and refine test cases</li><li><strong>CI Integration</strong> — runs validation in GitHub Actions</li>
       </ul></div>
-      <div class="tags"><span class="tag">Playwright</span><span class="tag">Groq AI</span><span class="tag">Tavily</span><span class="tag">GitHub Actions</span><span class="tag">Frontend QA</span><span class="tag">Bug Reports</span></div>
-      <div class="card-footer"><a class="btn" href="https://omdika.github.io/qagent/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <div class="tags"><span class="tag">Playwright</span><span class="tag">Groq AI</span><span class="tag">Tavily</span><span class="tag">GitHub Actions</span><span class="tag">Frontend QA</span><span class="tag">Automation</span></div>
+      <div class="card-footer"><a class="btn" href="https://omdika.github.io/qagent/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub</a></div>
     </article>
 
     <article class="card" style="margin-top:16px;">
       <div class="card-meta">Telegram · Vertex AI · iOS Development</div>
       <h2><a href="https://omdika.github.io/ios-devbot/" target="_blank" rel="noopener">Telegram iOS Development AI Agent</a></h2>
       <p>An AI-powered Telegram coding agent connected to Google Cloud Vertex AI (Gemini) for automating iOS development with Swift and SwiftUI directly through GitHub pull requests.</p>
-      <p>The agent helps iOS developers turn natural-language instructions, screenshots, and UI references into production-ready code changes. It can inspect an existing iOS codebase, update or create Swift files, and open a pull request for review — all from Telegram.</p>
-      <div class="stack"><div class="stack-title">Key Features</div><ul class="stack-list"><li><strong>Telegram Agent</strong> — control development tasks through chat</li><li><strong>Vertex AI (Gemini)</strong> — AI-powered code generation and reasoning</li><li><strong>Swift & SwiftUI</strong> — create and update native iOS code</li><li><strong>GitHub Pull Requests</strong> — automatically submit changes for review</li></ul></div>
-      <div class="tags"><span class="tag">Telegram</span><span class="tag">Vertex AI</span><span class="tag">Gemini</span><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">GitHub PR</span></div>
-      <div class="card-footer"><a class="btn" href="https://omdika.github.io/ios-devbot/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub ↗</a></div>
+      <p>The agent helps iOS developers turn natural-language instructions, screenshots, and UI references into production-ready code changes. It can inspect an existing iOS codebase, update or create code, and streamline the delivery workflow.</p>
+      <div class="stack"><div class="stack-title">Key Features</div><ul class="stack-list"><li><strong>Telegram Agent</strong> — control development tasks through chat</li><li><strong>Vertex AI (Gemini)</strong> — generate and validate implementation ideas</li><li><strong>GitHub PR Workflow</strong> — ship changes through reviewed pull requests</li><li><strong>SwiftUI Focus</strong> — accelerate iOS UI and app feature delivery</li></ul></div>
+      <div class="tags"><span class="tag">Telegram</span><span class="tag">Vertex AI</span><span class="tag">Gemini</span><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">GitHub</span></div>
+      <div class="card-footer"><a class="btn" href="https://omdika.github.io/ios-devbot/" target="_blank" rel="noopener">View Project →</a><a class="link-muted" href="https://github.com/omdika" target="_blank" rel="noopener">GitHub</a></div>
     </article>
 
     <footer><span>© 2026 omdika</span><a href="https://github.com/omdika/omdika.github.io" target="_blank" rel="noopener">github.com/omdika</a></footer>
